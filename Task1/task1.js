@@ -1,5 +1,9 @@
 const delay = ms => {
-  
+    return new Promise(res => {
+        setTimeout(() => {
+            res(ms);
+        }, ms);
+    });
 };
 
 const logger = time => console.log(`Resolved after ${time}ms`);
